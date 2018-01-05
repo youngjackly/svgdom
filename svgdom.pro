@@ -1,5 +1,6 @@
 TEMPLATE = subdirs
 
-SUBDIRS += samples src
+SUBDIRS += samples src svgren
+
 
 samples.file = tests/samples/samples.pro

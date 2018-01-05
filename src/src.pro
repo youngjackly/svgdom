@@ -3,6 +3,9 @@ TEMPLATE = lib
 TARGET = svgdom
 
 CONFIG += staticlib c++11
+CONFIG += object_parallel_to_source
+
+INCLUDEPATH += src
 
 HEADERS += \
     svgdom/elements/AspectRatioed.hpp \
@@ -29,7 +32,52 @@ HEADERS += \
     svgdom/StreamWriter.hpp \
     svgdom/StyleStack.hpp \
     svgdom/util.hxx \
-    svgdom/Visitor.hpp
+    svgdom/Visitor.hpp \
+    mikroxml/mikroxml.hpp \
+    utki/Buf.hpp \
+    utki/config.hpp \
+    utki/debug.hpp \
+    utki/Exc.hpp \
+    utki/Flags.hpp \
+    utki/math.hpp \
+    utki/PoolStored.hpp \
+    utki/Shared.hpp \
+    utki/Singleton.hpp \
+    utki/SpinLock.hpp \
+    utki/types.hpp \
+    utki/Unique.hpp \
+    utki/util.hpp \
+    utki/Void.hpp \
+    utki/windows.hpp \
+    papki/BufferFile.hpp \
+    papki/Exc.hpp \
+    papki/File.hpp \
+    papki/FSFile.hpp \
+    papki/MemoryFile.hpp \
+    papki/RootDirFile.hpp \
+    utki/Buf.hpp \
+    utki/config.hpp \
+    utki/debug.hpp \
+    utki/Exc.hpp \
+    utki/Flags.hpp \
+    utki/math.hpp \
+    utki/PoolStored.hpp \
+    utki/Shared.hpp \
+    utki/Singleton.hpp \
+    utki/SpinLock.hpp \
+    utki/types.hpp \
+    utki/Unique.hpp \
+    utki/util.hpp \
+    utki/Void.hpp \
+    utki/windows.hpp \
+    unikod/utf8.hpp \
+    kolme/Matrix3.hpp \
+    kolme/Matrix4.hpp \
+    kolme/Quaternion.hpp \
+    kolme/Rectangle.hpp \
+    kolme/Vector2.hpp \
+    kolme/Vector3.hpp \
+    kolme/Vector4.hpp
 
 SOURCES += \
     svgdom/elements/AspectRatioed.cpp \
@@ -52,7 +100,13 @@ SOURCES += \
     svgdom/StreamWriter.cpp \
     svgdom/StyleStack.cpp \
     svgdom/util.cpp \
-    svgdom/Visitor.cpp
+    svgdom/Visitor.cpp \
+    mikroxml/mikroxml.cpp \
+    papki/BufferFile.cpp \
+    papki/File.cpp \
+    papki/FSFile.cpp \
+    papki/MemoryFile.cpp \
+    unikod/utf8.cpp
 
 
 
