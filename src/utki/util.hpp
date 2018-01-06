@@ -37,7 +37,8 @@ template<typename T_A, typename T_B> std::map<T_B, T_A> flipMap(const std::map<T
  * @endcode
  */
 class ScopeExit{
-	std::function<void()noexcept> f;
+    typedef std::function<void()noexcept> func;
+    func f;
 
 public:
 	ScopeExit(const ScopeExit&) = delete;
@@ -47,14 +48,14 @@ public:
 	 * @brief Constructor.
 	 * @param f - function to call on object destruction.
 	 */
-	ScopeExit(decltype(f)&& f) :
+    ScopeExit(func&& f) :
 			f(std::move(f))
 	{}
 	
     ~ScopeExit()noexcept{
 		if(this->f){
 			this->f();
-		}
+        }
 	}
 	
 	/**
